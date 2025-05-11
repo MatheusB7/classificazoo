@@ -8,6 +8,8 @@ document.getElementById("animal-form").addEventListener("submit", function(event
   const paisOrigem = document.getElementById("paisOrigem").value;
   const filhote = document.getElementById("filhote").checked;
   const genero = document.getElementById("genero").value;
+  const comprimento = document.getElementById("comprimento").value;
+  const peso = document.getElementById("peso").value;
 
   const animal = {
     nome,
@@ -17,7 +19,9 @@ document.getElementById("animal-form").addEventListener("submit", function(event
     habitat,
     origem: paisOrigem,
     filhote,
-    genero
+    genero,
+    comprimento,
+    peso
   };
 
   let animais = JSON.parse(localStorage.getItem("animais")) || [];
